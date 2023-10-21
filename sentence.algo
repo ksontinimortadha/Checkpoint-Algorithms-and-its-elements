@@ -19,7 +19,7 @@ BEGIN
     write("the number of characters = ", nbC);
 
     // calculating the number of words
-    FOR i FROM 0 TO (nbC+1) STEP step  DO
+    FOR i FROM 0 TO (nbC+1) STEP 1  DO
         IF (sentence[i]= " ") THEN
             nbW:= nbW+1;
         END_IF
@@ -27,7 +27,7 @@ BEGIN
     write("the number of words = ",nbW)
 
     // calculating the number of vowels
-    FOR i FROM 0 TO (nbC+1) STEP step  DO
+    FOR i FROM 0 TO (nbC+1) STEP 1  DO
         IF ((sentence[i]='a') Or (sentence[i]='e') or (sentence[i]='i') or (sentence[i]='o') or (sentence[i]='u')) THEN
             nbV:=nbV+1;
         END_IF 
