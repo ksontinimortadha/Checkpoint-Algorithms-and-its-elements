@@ -7,14 +7,11 @@ VAR
 BEGIN
     //entering the sentence
     write("write the sentence to be treated character by character");
+    read(sentence);
 
     // calculating the number of characters
-    WHILE (c <> ".") DO
-        read(c);
-        IF (c <> ".") THEN
-            sentence:= sentence + c;
-            nbC:= nbC+1;
-        END_IF
+    WHILE (sentence[i] <> ".") DO
+        nbC:= nbC+1;
     END_WHILE
     write("the number of characters = ", nbC);
 
@@ -28,7 +25,7 @@ BEGIN
 
     // calculating the number of vowels
     FOR i FROM 0 TO (nbC+1) STEP 1  DO
-        IF ((sentence[i]='a') Or (sentence[i]='e') or (sentence[i]='i') or (sentence[i]='o') or (sentence[i]='u')) THEN
+        IF ((sentence[i]="a") Or (sentence[i]="e") or (sentence[i]="i") or (sentence[i]="o") or (sentence[i]="u")) THEN
             nbV:=nbV+1;
         END_IF 
     END_FOR
